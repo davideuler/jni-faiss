@@ -1,5 +1,5 @@
 # jni-faiss
-> linux only so far
+> works for Linux and Mac(both intel and m1 version)
 
 ## cpu
 
@@ -29,6 +29,10 @@ make -j8
 cd ../jni
 cp /opt/homebrew/Cellar/libomp/14.0.6/lib/libomp.a .
 make -j8 -f Makefile.mac
+
+cd ..
+mvn clean package -pl cpu-demo -am
+java -cp cpu-demo/target/cpu-demo-0.0.1.jar com.gameofdimension.faiss.tutorial.OneFlat
 
 ## reference
 

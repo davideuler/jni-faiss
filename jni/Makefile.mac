@@ -16,7 +16,8 @@ endif
 #JAVACFLAGS = -I /usr/lib/jvm/java/include/ -I /usr/lib/jvm/java/include/linux/ 
 JAVACFLAGS = -I $(JAVA_HOME)/include -I $(JAVA_HOME)/include/darwin 
 
-SWIGJAVASRC = ../cpu/src/main/java/com/gameofdimension/faiss/swig
+## generate code to target/src folder to avoid override manually updated codes.
+SWIGJAVASRC = ../cpu/target/src/main/java/com/gameofdimension/faiss/swig
 
 all: build
 
