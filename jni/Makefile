@@ -9,6 +9,7 @@ ifneq ($(strip $(NVCC)),)
 	SWIGFLAGS += -DGPU_WRAPPER
 endif
 
+SWIG = /usr/bin/swig
 JAVACFLAGS = -I /usr/lib/jvm/java/include/ -I /usr/lib/jvm/java/include/linux/
 SWIGJAVASRC = ../cpu/src/main/java/com/gameofdimension/faiss/swig
 
