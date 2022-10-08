@@ -45,6 +45,8 @@ public class OneFlat {
     int qn = 5;
     floatArray distances = new floatArray(qn * rn);
     longArray indices = new longArray(qn * rn);
+
+    //query by 5 sample vectors in the database, and get top 4 results:
     index.search(qn, xb.cast(), rn, distances.cast(), indices.cast());
 
     LOG.info(show(distances, qn, rn));
@@ -55,6 +57,8 @@ public class OneFlat {
     int rn = 4;
     floatArray distances = new floatArray(nq * rn);
     longArray indices = new longArray(nq * rn);
+
+    //perform nq = 10000 queries (the query set), each query get top 4 result:
     index.search(nq, xq.cast(), rn, distances.cast(), indices.cast());
 
     LOG.info(show(distances, 5, rn));

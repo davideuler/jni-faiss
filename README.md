@@ -34,6 +34,12 @@ cd ..
 mvn clean package -pl cpu-demo -am
 java -cp cpu-demo/target/cpu-demo-0.0.1.jar com.gameofdimension.faiss.tutorial.OneFlat
 
+## dependencies to install on native debian linux bullseye
+
+apt install libblas-dev liblapack-dev swig
+apt install openjdk-17-jdk maven
+ln -s /usr/lib/jvm/java-17-openjdk-amd64/ /usr/lib/jvm/java
+
 ## reference
 
 - https://github.com/adamheinrich/native-utils
